@@ -13,14 +13,22 @@ https://github.com/Jefferson-Henrique/GetOldTweets/
 
 **bosser les indexes :**
 
-index par nom des rumeurs
-index par site d'origine
-index par taux de partage
-index des mots clés
+*index par nom des rumeurs*
+
+*index par site d'origine*
+
+*index par taux de partage*
+
+*index des mots clés*
 
 **bosser les liens internes :**
 
 avoir un texte balisé avec des thématiques associées en fixe, avoir un flux d'actualité qui vient,
 scanner le flux et voir si il y a des mots clés correspondant aux thématiques,
-dès que ça correspond, ajouter : (See also "animals" page <a href="#animals"></a>)
-Exemple : "The story first made it into the press with the Daily Mail on Jan. 14. It cites a Russian TV report about a group of "investigators" who supplied footage of a Yeti (See also "animals" page <a href="#animals"></a>) in the Adygeya Republic. The images of the video were provided by Central European News, a newswire that has often been the source of false/dubious stories."
+dès que ça correspond, ajouter :
+
+*(See also "animals" page < a href = " #animals " > < /a >)*
+
+Exemple :
+
+"The story first made it into the press with the Daily Mail on Jan. 14. It cites a Russian TV report about a group of "investigators" who supplied footage of a Yeti (See also "animals" page <a href="#animals"></a>) in the Adygeya Republic. The images of the video were provided by Central European News, a newswire that has often been the source of false/dubious stories."
