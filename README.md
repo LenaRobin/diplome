@@ -2,13 +2,20 @@
 
 # à faire
 
-**récupérer le contenu des sites en lien dans les commentaires d'emergent**
+** récupérer le contenu des sites en lien dans les commentaires d'emergent **
+
 ** récupérer les liens sur les articles d'emergent, puis le contenu **
+
 ** recupérer des tweets plus anciens : **
 https://github.com/Jefferson-Henrique/GetOldTweets/
+
 ** emergent sont des vendus (cimer Craig) **
-** bosser les indexes : ** *index par *
+
+** bosser les indexes : **
+*index par *
+
 **bosser les liens internes :**
+
 avoir un texte balisé avec des thématiques associées en fixe, avoir un flux d'actualité qui vient,
 scanner le flux et voir si il y a des mots clés correspondant aux thématiques,
 dès que ça correspond, ajouter : (See also "animals" page <a href="#animals"></a>)
