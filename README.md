@@ -2,17 +2,21 @@
 
 # à faire
 
-** récupérer le contenu des sites en lien dans les commentaires d'emergent **
+**récupérer le contenu des sites en lien dans les commentaires d'emergent**
 
-** récupérer les liens sur les articles d'emergent, puis le contenu **
+**récupérer les liens sur les articles d'emergent, puis le contenu**
 
-** recupérer des tweets plus anciens : **
+**recupérer des tweets plus anciens :**
 https://github.com/Jefferson-Henrique/GetOldTweets/
 
-** emergent sont des vendus (cimer Craig) **
+**emergent sont des vendus (cimer Craig)**
 
-** bosser les indexes : **
-*index par *
+**bosser les indexes :**
+
+index par nom des rumeurs
+index par site d'origine
+index par taux de partage
+index des mots clés
 
 **bosser les liens internes :**
 
