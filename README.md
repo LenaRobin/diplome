@@ -32,8 +32,9 @@ dès que ça correspond, ajouter :
 ```
 
 Exemple :
-
+```html
 "The story first made it into the press with the Daily Mail on Jan. 14. It cites a Russian TV report about a group of "investigators" who supplied footage of a Yeti (See also "animals" page <a href="#animals"></a>) in the Adygeya Republic. The images of the video were provided by Central European News, a newswire that has often been the source of false/dubious stories."
+```
 
 **changer div class="news" par div class="news" div id="news1", div id="news2" etc**
 
