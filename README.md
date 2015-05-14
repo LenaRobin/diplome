@@ -135,15 +135,20 @@ america, n°page, n°page, n°page
 berlusconi, n°page, n°page, n°page  
 cameron, n°page, n°page  
   
+Rajouter une virgule et un espace dans chaque div  
+```html
+<a href="#title168">, </a>
+```
+  
 N'implique pas de prédéfinir des mots-clés à l'avance, ils se mettent en place avec les nouvelles rumeurs.  
 Implique de définir des variables dans le css avec get-string.  
 
 ```html
 <div id="index_motscles">  
   
-<div class="motscles1">america</div><a href="#title18"></a><a href="#title21"></a><a href="#title37"></a>  
-<div class="motscles2">berlusconi</div><a href="#title168"></a><a href="#title23"></a><a href="#title37"></a>  
-<div class="motscles3">cameron</div><a href="#title90"></a><a href="#title56"></a>  
+<div class="motscles1">america</div><a href="#title18"></a>, <a href="#title21">, </a><a href="#title37"></a>  
+<div class="motscles2">berlusconi</div><a href="#title168">, </a><a href="#title23">, </a><a href="#title37"></a>  
+<div class="motscles3">cameron</div><a href="#title90"></a>, <a href="#title56"></a>  
 
 
 
