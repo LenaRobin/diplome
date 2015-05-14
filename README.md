@@ -1,5 +1,3 @@
-# diplome
-
 # à faire
 
 **récupérer le contenu des sites en lien dans les commentaires d'emergent**
@@ -41,7 +39,94 @@ Exemple :
 ```html
 <div class="news"><div id="news1">
 
-<div class="trueorfalse"> "false"</div><div class="url"> "sandwich-thief"</div><div class="tags"> []</div><div class="title2"> Two office workers in an epic battle over a stolen sandwich"</div><div class="description"> "It began to spread as real after being posted to Reddit, with the College Humor watermarks removed."</div><div class="origin"> "http://www.reddit.com/r/funny/comments/2e6q4i/hi_tina_from_hr_again/%20"</div><div class="share"> 108045</div><div class="pouroucontre">     "ignoring": 1,    "for": 4,    "against": 2  </div><div class="date"> "2014-08-26T20:33:29.558</div>
+<div class="trueorfalse"> "false"</div><div class="url"> "sandwich-thief"</div><div class="tags"> []</div><div class="title2"> Two office workers in an epic battle over a stolen sandwich</div><div class="description"> "It began to spread as real after being posted to Reddit, with the College Humor watermarks removed."</div><div class="origin"> "http://www.reddit.com/r/funny/comments/2e6q4i/hi_tina_from_hr_again/%20"</div><div class="share"> 108045</div><div class="pouroucontre">     "ignoring": 1,    "for": 4,    "against": 2  </div><div class="date"> "2014-08-26T20:33:29.558</div>
 </div>
 </div>
 ```
+
+# index
+
+**index des noms des rumeurs (variable "title")**
+
+Index/sommaire selon l'ordre du livre (par thème, puis par ordre chronologique de la plus récente à la plus ancienne)
+Nom de la partie 1
+rumeur 1, n°page
+rumeur 3, n°page
+Nom de la partie 2
+rumeur 2, n°page
+etc.
+
+```html
+<div id="index_sommaire">
+
+<div class="index_partie">Partie 1</div>
+
+<div id="index_title1">North Korea plans to open a restaurant in Scotland</div>
+<a href="#title1"></a>
+
+<div id="index_title3">Two office workers in an epic battle over a stolen sandwich</div>
+<a href="#title3"></a>
+
+<div class="index_partie">Partie 2</div>
+
+<div id="index_title2">North Korea plans to open a restaurant in Scotland</div>
+<a href="#title2"></a>
+
+</div>
+```
+
+**index de la rumeur la plus partagée sur les réseaux (variable "share")**
+
+Utiliser la variable "share"
+rumeur 4, nombre de partage, n°page
+rumeur 18, nombre de partage, n°page
+rumeur 2, nombre de partage, n°page
+
+```html
+<div id="index_partage">
+
+<div id="index_title4">North Korea plans to open a restaurant in Scotland</div>
+<div id="share4">111990999 shares</div>
+<a href="#title4"></a>
+
+<div id="index_title18">Two office workers in an epic battle over a stolen sandwich</div>
+<div id="share18">856 shares</div>
+<a href="#title18"></a>
+
+</div>
+```
+
+**index des rumeurs par url (variable "origin")**
+
+Utiliser la variable "origin" et les classer par ordre alphabétique de a à z
+rumeur 36, url (americanwebsite.com/blablabla), n°page
+rumeur 21, url (besthistory.com/blablabla), n°page
+rumeur 153, url (zebesthistory.com/blablabla), n°page
+
+Implique de retirer les préfixes :
+http://
+www.
+https://
+
+```html
+<div id="index_url">
+
+<div id="index_title36">North Korea plans to open a restaurant in Scotland</div>
+<div id="origin36">americanwebsite.com/blablabla</div>
+<a href="#title36"></a>
+
+<div id="index_title21">Two office workers in an epic battle over a stolen sandwich</div>
+<div id="origin21">besthistory.com/blablabla</div>
+<a href="#title21"></a>
+
+</div>
+```
+
+**index des mots-clés (variables "tags" et "url") **
+
+Lister tous les mots-clés des rumeurs, utiliser les variables "tags" et "url" (url correspond au "slug" du site)
+
+```html
+<div id="index_sommaire_url">
+
+
