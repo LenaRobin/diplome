@@ -1,4 +1,4 @@
-# à faire
+# À faire
 
 **récupérer le contenu des sites en lien dans les commentaires d'emergent**
 
@@ -52,9 +52,9 @@ Exemple :
 </div>
 ```
 
-# index
+# Liste des index à mettre en place
 
-**index des noms des rumeurs (variable "title")**
+**Index des noms des rumeurs (variable "title")**
 
 Index/sommaire selon l'ordre du livre (par thème, puis par ordre chronologique de la plus récente à la plus ancienne)  
 Nom de la partie 1  
@@ -81,7 +81,7 @@ etc.
 </div>
 ```
 
-**index de la rumeur la plus partagée sur les réseaux (variable "share")**
+**Index de la rumeur la plus partagée sur les réseaux (variable "share")**
 
 Utiliser la variable "share"  
 rumeur 4, nombre de partage, n°page  
@@ -102,7 +102,7 @@ rumeur 2, nombre de partage, n°page
 </div>
 ```
 
-**index des rumeurs par url (variable "origin")**
+**Index des rumeurs par url (variable "origin")**
 
 Utiliser la variable "origin" et les classer par ordre alphabétique de A à Z.
 rumeur 36, url (americanwebsite.com/blablabla), n°page  
@@ -128,7 +128,7 @@ https://
 </div>
 ```
 
-**index des mots-clés (variables "tags" et "url") **
+**Index des mots-clés (variables "tags" et "url")**
 
 Lister tous les mots-clés des rumeurs, utiliser les variables "tags" et "url" (url correspond au "slug" du site)    
 america, n°page, n°page, n°page  
