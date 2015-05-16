@@ -1,4 +1,4 @@
-Politics & International News
+** Politics & International News **
 ISIS
 Jihad
 Jihadi John
@@ -47,7 +47,7 @@ libya
 Bary
 North Korea
 
-Economics & media
+** Economics & media **
 apple
 sell
 selling
@@ -79,7 +79,7 @@ LG
 Gruber stainless steel
 spicy condom
 
-Public Health, Science & Environment
+** Public Health, Science & Environment **
 GMO
 Ebola
 Planetary alignment
@@ -95,7 +95,7 @@ meteorite
 bear attack
 bigfoot
 
-Miscellaneous
+** Miscellaneous **
 sex
 lunch
 tanker
@@ -140,7 +140,7 @@ man under atm
 nhl vegas
 thief
 
-People
+** People **
 Tiger
 Willie
 shane smith
@@ -161,6 +161,19 @@ paul rudd
 judd nelson
 banksy
 ESPN domestic violence panel
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 human death GMO
 apple watch store appointments
