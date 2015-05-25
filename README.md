@@ -7,11 +7,12 @@
 **recupérer des tweets plus anciens :**
 https://github.com/Jefferson-Henrique/GetOldTweets/
 
-**emergent sont des vendus (cimer Craig)**
-
-**bosser les indexes :**
-
-*index par nom des rumeurs*
+**index par nom des rumeurs**
+*harmoniser les noms des balises : il faut choisir entre title ou news*
+```html
+<a href="#title[234]"></a>
+et
+<div id="news[234]">```
 
 *index par site d'origine*
 
