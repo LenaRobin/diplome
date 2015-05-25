@@ -79,6 +79,7 @@ for x in range(0,328):
             print("not found")
        
 #for item in shareslist:
+#il faut rajouter des balises <br> à la fin de chaque span
 for i in range(len(shareslist)):  
     nsharesindex = '<span class ="share_numero">'  \
     + str(shareslist[i]).replace(', u\'Claim:','</span>\n<span class="share_descriptif">')[1:]
