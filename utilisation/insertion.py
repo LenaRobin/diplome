@@ -18,7 +18,7 @@ people_strings = ("Tiger","Willie-shane","smith","macklemore","Kanye","Michael-j
 for x in range(0,328):
     if data['claims'][x]['truthiness'] != 'true':# and data['claims'][x]['publishedat'][5:7]   [:4]>=  :
         if data['claims'][x]['originUrl'] != None: 
-            main = ('<div class="news_info">' + '<div id="news"' + str(x) +'>' \
+            main = ('<div class="news_info">' + '<div id="news' + str(x) +'">' \
                  + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
                  + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
                  + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
@@ -29,7 +29,7 @@ for x in range(0,328):
                  + '<div class="news_twitter"><div class ="share">'\
                  + str(data['claims'][x]['nShares']) + '</div><div class="twitter_bloc"></div></div> \n').encode('utf8')
         else:
-            main = ('<div class="news_info">' + '<div id="news"' + str(x) +'>' \
+            main = ('<div class="news_info">' + '<div id="news' + str(x) +'">' \
                  + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
                  + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
                  + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
@@ -82,7 +82,7 @@ for x in range(0,328):
             jojo=1
        
 #for item in shareslist:
-#il faut rajouter des balises <br> à la fin de chaque span
+#il faut rajouter des balises <br> a la fin de chaque span
 for i in range(len(shareslist)):  
     nsharesindex = '\n<span class="share_numero">'  \
     + str(shareslist[i]).replace(', u','</span><br>\n<span class="share_descriptif">')[1:]
