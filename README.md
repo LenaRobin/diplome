@@ -7,6 +7,8 @@
 **recupérer des tweets plus anciens :**
 https://github.com/Jefferson-Henrique/GetOldTweets/
 
+http://topsy.com/analytics
+
 **index par nom des rumeurs**
 *harmoniser les noms des balises : il faut choisir entre title ou news*
 ```html
