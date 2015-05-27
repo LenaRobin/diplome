@@ -6,6 +6,7 @@ main = ""
 nsharesindex = ""
 titleindex = ""
 shareslist = []
+jojo = 0
 politic_strings = ("ISIS","Jihad","Jihadi-John","Iraq","Israel","Gaza","Yemen","marines","manson","King-of-Jordan","Boko-Haram","Taliban","sharia","saudi-arabia","obama","Michele-Bachmann","Boston-marathon","Charlie-hebdo","Fidel-Castro","saudi","president","seal","buckingham-palace","pope-francis","Kim-jong-un","ferguson","Abu-Bakr-al-Baghdadi","the-euro","plot","elon-university","putin","kurdish-female-fighter","kevin-vickers","afghanistan","fort-carson","cub-of-baghdadi","mass-grave-mexico","jong-un","hand-up-dont-shoot","pilot-disowned","jongun","alBritani","Foley","syria","libya","Bary","North-Korea")
 economic_strings = ("apple","sell","selling","watch","TBS","Brian-Williams","highest-paid","IBM","iphone","Fox-News","resort-old-snow","movie","big-mac","sony","customer","NSA-elf","video-game","trader","ben-edelman","microsoft","amazon","nbc-meteorologist","lenovo","steve-jobs","comcast","ios8","beats-shutdown","LG","Gruber-stainless-steel","spicy-condom")
 sante_strings = ("GMO","Ebola","Planetary-alignment","oldest-tree","magneto-boy","darkness","spider","crabzilla","hazmat","sashimi","third-breast","meteorite","bear-attack","bigfoot")
@@ -17,28 +18,29 @@ people_strings = ("Tiger","Willie-shane","smith","macklemore","Kanye","Michael-j
 for x in range(0,328):
     if data['claims'][x]['truthiness'] != 'true':# and data['claims'][x]['publishedat'][5:7]   [:4]>=  :
         if data['claims'][x]['originUrl'] != None: 
-            main = ('<div class="news_info">' + '<div id=news' + str([x]) +'>' \
-                 + '<div class ="trueorfalse">"' + data['claims'][x]['truthiness'] + '"</div>' \
-                 + '<div class ="url">"' + data['claims'][x]['slug'] + '"</div>' \
-                 + '<div class ="title">"' + data['claims'][x]['headline'] + '"</div>' \
-                 + '<div class ="description">"' + data['claims'][x]['origin'] + '"</div>' \
-                 + '<div class ="date">"' + data['claims'][x]['publishedAt'][:10] + '"</div></div>'\
-                 + '<div class="news_article"><div class ="origine">"'\
-                 + data['claims'][x]['originUrl'] + '"</div><div class="article"></div></div>' \
-                 + '<div class="news_twitter"><div class ="share">"'\
-                 + str(data['claims'][x]['nShares']) + '"</div><div class="twitter_bloc"></div></div> \n').encode('utf8')
+            main = ('<div class="news_info">' + '<div id="news"' + str(x) +'>' \
+                 + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
+                 + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
+                 + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
+                 + '<div class ="description">' + data['claims'][x]['origin'] + '</div>' \
+                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div></div>'\
+                 + '<div class="news_article"><div class ="origine">The rumor first appeared on:<br><span class="lien">'\
+                 + data['claims'][x]['originUrl'] + '</span></div><div class="article"></div></div>' \
+                 + '<div class="news_twitter"><div class ="share">'\
+                 + str(data['claims'][x]['nShares']) + '</div><div class="twitter_bloc"></div></div> \n').encode('utf8')
         else:
-            main = ('<div class="news_info">' + '<div id=news' + str([x]) +'>' \
-                 + '<div class ="trueorfalse">"' + data['claims'][x]['truthiness'] + '"</div>' \
-                 + '<div class ="title">"' + data['claims'][x]['headline'] + '"</div>' \
-                 + '<div class ="description">"' + data['claims'][x]['origin'] + '"</div>' \
-                 + '<div class ="date">"' + data['claims'][x]['publishedAt'][:10] + '"</div></div>'\
-                 + '<div class="news_article"><div class ="origine">"'\
-                 + '<div class="news_twitter"><div class ="share">"'\
-                 + str(data['claims'][x]['nShares']) + '"</div><div class="twitter_bloc"></div></div> \n').encode('utf8')
+            main = ('<div class="news_info">' + '<div id="news"' + str(x) +'>' \
+                 + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
+                 + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
+                 + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
+                 + '<div class ="description">' + data['claims'][x]['origin'] + '</div>' \
+                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div></div>'\
+                 + '<div class="news_article"><div class ="origine"></div>'\
+                 + '<div class="news_twitter"><div class ="share"> Total shares on social networks: '\
+                 + str(data['claims'][x]['nShares']) + '</div> <div class="twitter_bloc"></div></div> \n').encode('utf8')
 
-        titleindex = ('<span class="index_sommaire_title'+ str([x]) + '">' + data['claims'][x]['headline']+ '</span>\n <a href="#title'+ str([x]) + '"></a>').encode('utf8')
-        shareslist.append([data['claims'][x]['nShares'] ,data['claims'][x]['headline'],x])        
+        titleindex = ('<span class="index_sommaire_title'+ str(x) + '">' + data['claims'][x]['headline']+ '</span><br>\n <a href="#news'+ str(x) + '"></a>').encode('utf8')
+        shareslist.append([data['claims'][x]['nShares'],data['claims'][x]['headline'],str(x)])        
         shareslist.sort() 
 
 
@@ -67,26 +69,27 @@ for x in range(0,328):
             file("test.html","w").write(result)
             #index
             result=file("test.html","r").read().replace('People<br><br>','People<br><br>\n'+ titleindex)
+            file("test.html","w").write(result)
 
         elif any(n in data['claims'][x]['slug'] for n in misc_strings): 
-            result=file("test.html","r").read().replace('news_miscellaneous">', 'news_miscellaneous" >' + main)
+            result=file("test.html","r").read().replace('news_miscellaneous">','news_miscellaneous">' + main)
             file("test.html","w").write(result)
             #index
             result=file("test.html","r").read().replace('Miscellaneous<br><br>','Miscellaneous<br><br>\n'+ titleindex)
             file("test.html","w").write(result)
 
         else:
-            print("not found")
+            jojo=1
        
 #for item in shareslist:
 for i in range(len(shareslist)):  
-    nsharesindex = '<span class ="share_numero">'  \
-    + str(shareslist[i]).replace(', u\'Claim:','</span>\n<span class="share_descriptif">')[1:]
-    nsharesindex = nsharesindex.replace('\', ','</span>\n<span class="share_page"><a href="#title[')
-    nsharesindex = nsharesindex.replace(']',']"></a></span>') 
+    nsharesindex = '\n<span class="share_numero">'  \
+    + str(shareslist[i]).replace(', u','</span><br>\n<span class="share_descriptif">')[1:]
+    nsharesindex = nsharesindex.replace(', \'','</span>\n<span class="share_page"><a href="#title')
+    nsharesindex = nsharesindex.replace('\']','"></a></span><br>') 
 #    print(nsharesindex)
 #remplacer "shared rumors<br>"
-    result=file("test.html","r").read().replace('shared rumors<br><br>','shares rumors<br><br>'+nsharesindex)
+    result=file("test.html","r").read().replace('shared rumors<br><br>','shared rumors<br><br>'+nsharesindex)
     file("test.html","w").write(result)
 #en vrai l'ajouter au document en n'oubliant pas
 #<div id = "colonne_share"> ... </id>
