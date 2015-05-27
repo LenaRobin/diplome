@@ -82,6 +82,7 @@ for x in range(0,328):
             jojo=1
        
 #for item in shareslist:
+#il faut rajouter des balises <br> à la fin de chaque span
 for i in range(len(shareslist)):  
     nsharesindex = '\n<span class="share_numero">'  \
     + str(shareslist[i]).replace(', u','</span><br>\n<span class="share_descriptif">')[1:]
