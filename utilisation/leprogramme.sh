@@ -12,5 +12,6 @@ sed -i "s#Claim: ##g" test.html
 sed -i "s#'</s#</s#g" test.html
 sed -i "s#\"</s#</s#g" test.html
 sed -i "s#tif\">'#tif\">#g" test.html
+#sed -i "s/#.\w*/<balise>&<\/balise>/g" tweets.html
 
 echo "bravobravobravo"
