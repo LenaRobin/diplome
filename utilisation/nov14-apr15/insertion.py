@@ -19,26 +19,24 @@ for x in range(0,328):
     if (data['claims'][x]['truthiness'] != 'true') and ((str(pdate[5:7]) in ('11','12') and str(pdate[3]) == '4') or ( str(pdate[5:7]) in ('01','02','03','04') and str(pdate[3]) == '5') ):
         print(pdate)
         if data['claims'][x]['originUrl'] != None: 
-            main = ('<div class="news_info">' + '<div id="news' + str(x) +'">' \
-                 + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
-                 + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
+            main = ('<div class="news">\n\n' + '<div id="news' + str(x) +'">' \
                  + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
                  + '<div class ="description">' + data['claims'][x]['origin'] + '</div>' \
-                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div></div>'\
-                 + '<div class="news_article"><div class ="origine">The rumor first appeared on:<br><span class="lien">'\
-                 + data['claims'][x]['originUrl'] + '</span></div><div class="article"></div></div>' \
-                 + '<div class="news_twitter"><div class ="share">'\
-                 + str(data['claims'][x]['nShares']) + '</div><div class="twitter_bloc"></div></div> \n').encode('utf8')
+                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div>'\
+                 + '<div class="news_article"><div class ="origin">The rumor first appeared on:<br>' + data['claims'][x]['originUrl'] \
+                 + '<br>Then, other websites peddled the rumor. Here are some examples found at this period.</div></div>'\
+                 + '<div class="journal">\n\n\n\n</div>'
+                 + '<div class="news_twitter"><div class ="share">The rumor has been shared '\
+                 + str(data['claims'][x]['nShares']) + ' times on Twitter.<br>Below are the very first tweets. </div><div class="twitter_bloc">\n\n\n\n</div></div></div></div> \n').encode('utf8')
         else:
-            main = ('<div class="news_info">' + '<div id="news' + str(x) +'">' \
-                 + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
-                 + '<div class ="url">' + data['claims'][x]['slug'] + '</div>' \
+            main = ('<div class="news">\n\n' + '<div id="news' + str(x) +'">' \
                  + '<div class ="title">' + data['claims'][x]['headline'] + '</div>' \
                  + '<div class ="description">' + data['claims'][x]['origin'] + '</div>' \
-                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div></div>'\
-                 + '<div class="news_article"><div class ="origine"></div>'\
-                 + '<div class="news_twitter"><div class ="share"> Total shares on social networks: '\
-                 + str(data['claims'][x]['nShares']) + '</div> <div class="twitter_bloc"></div></div> \n').encode('utf8')
+                 + '<div class ="date">' + data['claims'][x]['publishedAt'][:10] + '</div>'\
+                 + '<div class="news_article"><div class ="origin">The rumor has no defined origin. Some websites peddled the rumor. Here are some examples found at this period.</div></div>'\
+                 + '<div class="journal">\n\n\n\n</div>'
+                 + '<div class="news_twitter"><div class ="share">The rumor has been shared '\
+                 + str(data['claims'][x]['nShares']) + ' times on Twitter.<br>Below are the very first tweets. </div><div class="twitter_bloc">\n\n\n\n</div></div></div></div> \n').encode('utf8')
 
         titleindex = ('<span class="index_sommaire_title'+ str(x) + '">' + data['claims'][x]['headline']+ '</span><br>\n <a href="#news'+ str(x) + '"></a>').encode('utf8')
         shareslist.append([data['claims'][x]['nShares'],data['claims'][x]['headline'],str(x)])        
