@@ -13,10 +13,11 @@ sante_strings = ("GMO","Ebola","Planetary-alignment","oldest-tree","magneto-boy"
 misc_strings = ("sex","lunch","tanker","castrated","release","testicles","porn","priest","bride","burger","Star-wars","blogger","app","snowy-owl","suspects","bosnian-girls","penis","Hobbit","pizza","catcallers","italian-nun","baby","underwear","sell-son","cat-coat","pig-brothel","homeless-man","naked","college-on-fire","adulterous","woman-in-kfc","trans-teen","dms","self-rape","teletubbies","gay-teacher","polar-bear","fail-video","text-jesus","batmobile","man-under-atm","nhl-vegas","thief")
 people_strings = ("Tiger","Willie-shane","smith","macklemore","Kanye","Michael-jackson","Bruno-Mars","Hugh-Hefner","axel-rose","Cesar-Millan","lisa-bonet","vogue","Taylor-Lianne-Chandler","Raven-Symone","led-zeppelin","Macaulay-Culkin","paul-rudd","judd-nelson","banksy","ESPN-domestic-violence-panel")
 #cesar millan avec un accent chelou en vrai
-
 #programme principal : on parse le fichier json et on en recupere ce qu'on veut.
 for x in range(0,328):
-    if data['claims'][x]['truthiness'] != 'true':# and data['claims'][x]['publishedat'][5:7]   [:4]>=  :
+    pdate = data['claims'][x]['publishedAt']
+    if (data['claims'][x]['truthiness'] != 'true') and ((str(pdate[5:7]) in ('11','12') and str(pdate[3]) == '4') or ( str(pdate[5:7]) in ('01','02','03','04') and str(pdate[3]) == '5') ):
+        print(pdate)
         if data['claims'][x]['originUrl'] != None: 
             main = ('<div class="news_info">' + '<div id="news' + str(x) +'">' \
                  + '<div class ="trueorfalse">' + data['claims'][x]['truthiness'] + '</div>' \
